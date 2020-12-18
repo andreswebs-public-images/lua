@@ -19,8 +19,8 @@ ARG PUID=1000
 ARG PGID=1000
 
 RUN \
-  addgroup -g ${PGID} -S lua && \
-  adduser -u ${PUID} -G lua -h /lua -D lua
+  addgroup -g "${PGID}" -S lua && \
+  adduser -u "${PUID}" -G lua -h /lua -D lua
 
 WORKDIR /lua
 
