@@ -40,8 +40,7 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: .
-          registry: ${{ env.CONTAINER_REGISTRY }}
-          platforms: linux/amd64
+          platforms: linux/amd64,linux/arm64
           push: true
           provenance: false
           cache-from: type=local,src=/tmp/.buildx-cache
